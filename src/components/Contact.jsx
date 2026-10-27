@@ -41,46 +41,28 @@ function validate(form) {
 export default function Contact() {
   const [form,    setForm]    = useState(INITIAL);
   const [errors,  setErrors]  = useState({});
-  const [status,  setStatus]  = useState("idle"); // idle | sending | success | error
+  const [emailDraftOpened, setEmailDraftOpened] = useState(false);
 
   const handle = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
     if (errors[e.target.name]) setErrors((er) => ({ ...er, [e.target.name]: "" }));
   };
 
-  const submit = async (e) => {
+  const submit = (e) => {
     e.preventDefault();
     const errs = validate(form);
     if (Object.keys(errs).length) { setErrors(errs); return; }
 
-    setStatus("sending");
+    const body = [
+      `Name: ${form.name}`,
+      `Email: ${form.email}`,
+      "",
+      form.message,
+    ].join("\n");
+    const mailto = `mailto:ibrahime8553@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(body)}`;
 
-    /*
-      Wire up to EmailJS:
-      1. npm install @emailjs/browser
-      2. Create account at emailjs.com
-      3. Replace SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY below
-      ---
-      import emailjs from "@emailjs/browser";
-      try {
-        await emailjs.send("SERVICE_ID", "TEMPLATE_ID", {
-          from_name: form.name,
-          from_email: form.email,
-          subject: form.subject,
-          message: form.message,
-        }, "PUBLIC_KEY");
-        setStatus("success");
-        setForm(INITIAL);
-      } catch {
-        setStatus("error");
-      }
-    */
-
-    /* Simulated success for now — remove this block when EmailJS is wired up */
-    await new Promise((r) => setTimeout(r, 1500));
-    setStatus("success");
-    setForm(INITIAL);
-    setTimeout(() => setStatus("idle"), 5000);
+    setEmailDraftOpened(true);
+    window.location.href = mailto;
   };
 
   return (
@@ -147,14 +129,9 @@ export default function Contact() {
           <div className="contact-right">
             <h3 className="form-heading">Send a Message</h3>
 
-            {status === "success" && (
-              <div className="form-success">
-                ✅ Message sent! I'll get back to you soon.
-              </div>
-            )}
-            {status === "error" && (
-              <div className="form-error">
-                ❌ Something went wrong. Please email me directly.
+            {emailDraftOpened && (
+              <div className="form-notice" role="status">
+                Your email app should open with the message ready. Press Send in that app to deliver it.
               </div>
             )}
 
@@ -192,18 +169,13 @@ export default function Contact() {
               <button
                 type="submit"
                 className="send-btn"
-                disabled={status === "sending"}
               >
-                {status === "sending" ? (
-                  <><span className="spinner" /> Sending...</>
-                ) : (
-                  <>Send Message
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
-                      <line x1="22" y1="2" x2="11" y2="13"/>
-                      <polygon points="22,2 15,22 11,13 2,9"/>
-                    </svg>
-                  </>
-                )}
+                <>Send Message
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22,2 15,22 11,13 2,9"/>
+                  </svg>
+                </>
               </button>
             </form>
           </div>
