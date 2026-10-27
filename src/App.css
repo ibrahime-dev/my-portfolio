@@ -1,9 +1,3 @@
-/* hide main content while loader is visible */
-.app-hidden {
-  visibility: hidden;
-  pointer-events: none;
-}
-
 .section {
   padding: 100px 0;
   border-top: 1px solid var(--border);
