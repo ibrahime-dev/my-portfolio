@@ -2,9 +2,9 @@ import "./About.css";
 
 const stats = [
   { value: "4",   label: "Featured Projects" },
-  { value: "22",  label: "Skills & Tools" },
+  { value: "MERN", label: "Document Database Stack" },
+  { value: "PERN", label: "SQL Database Stack" },
   { value: "IT",  label: "Wollo University" },
-  { value: "GON", label: "Gondar, Ethiopia" },
 ];
 
 const whatIDo = [

@@ -9,12 +9,12 @@ const categories = [
     color: "#087ea4",
     glow: "rgba(8,126,164,0.12)",
     skills: [
-      { name: "HTML5",             icon: "🌐", level: "Advanced",     pct: 92 },
-      { name: "CSS3",              icon: "🎨", level: "Advanced",     pct: 90 },
-      { name: "JavaScript",        icon: "⚡", level: "Advanced",     pct: 85 },
-      { name: "React.js",          icon: "⚛️", level: "Intermediate", pct: 75 },
-      { name: "Tailwind CSS",      icon: "🌊", level: "Intermediate", pct: 72 },
-      { name: "Responsive Design", icon: "📱", level: "Advanced",     pct: 88 },
+      { name: "HTML5", icon: "🌐" },
+      { name: "CSS3", icon: "🎨" },
+      { name: "JavaScript", icon: "⚡" },
+      { name: "React.js", icon: "⚛️" },
+      { name: "Tailwind CSS", icon: "🌊" },
+      { name: "Responsive Design", icon: "📱" },
     ],
   },
   {
@@ -24,12 +24,12 @@ const categories = [
     color: "#7054b8",
     glow: "rgba(112,84,184,0.12)",
     skills: [
-      { name: "Laravel",     icon: "🔴", level: "Advanced",     pct: 85 },
-      { name: "Express.js",  icon: "🚀", level: "Intermediate", pct: 72 },
-      { name: "Node.js",     icon: "🟢", level: "Intermediate", pct: 70 },
-      { name: "ASP.NET MVC", icon: "🔷", level: "Intermediate", pct: 65 },
-      { name: "PHP",         icon: "🐘", level: "Advanced",     pct: 88 },
-      { name: "REST APIs",   icon: "🔗", level: "Advanced",     pct: 82 },
+      { name: "Laravel", icon: "🔴" },
+      { name: "Express.js", icon: "🚀" },
+      { name: "Node.js", icon: "🟢" },
+      { name: "ASP.NET MVC", icon: "🔷" },
+      { name: "PHP", icon: "🐘" },
+      { name: "REST APIs", icon: "🔗" },
     ],
   },
   {
@@ -39,10 +39,10 @@ const categories = [
     color: "#168453",
     glow: "rgba(22,132,83,0.12)",
     skills: [
-      { name: "MySQL",      icon: "🐬", level: "Advanced",     pct: 85 },
-      { name: "MongoDB",    icon: "🍃", level: "Intermediate", pct: 68 },
-      { name: "PostgreSQL", icon: "🐘", level: "Intermediate", pct: 62 },
-      { name: "SQL Server", icon: "🗄️", level: "Intermediate", pct: 65 },
+      { name: "MySQL", icon: "🐬" },
+      { name: "MongoDB", icon: "🍃" },
+      { name: "PostgreSQL", icon: "🐘" },
+      { name: "SQL Server", icon: "🗄️" },
     ],
   },
   {
@@ -52,20 +52,15 @@ const categories = [
     color: "#b45309",
     glow: "rgba(180,83,9,0.12)",
     skills: [
-      { name: "Git",             icon: "🌿", level: "Advanced",     pct: 88 },
-      { name: "GitHub",          icon: "🐙", level: "Advanced",     pct: 90 },
-      { name: "VS Code",         icon: "💻", level: "Advanced",     pct: 95 },
-      { name: "Postman",         icon: "📮", level: "Intermediate", pct: 72 },
-      { name: "MongoDB Compass", icon: "🧭", level: "Intermediate", pct: 65 },
-      { name: "Figma",           icon: "🎭", level: "Intermediate", pct: 60 },
+      { name: "Git", icon: "🌿" },
+      { name: "GitHub", icon: "🐙" },
+      { name: "VS Code", icon: "💻" },
+      { name: "Postman", icon: "📮" },
+      { name: "MongoDB Compass", icon: "🧭" },
+      { name: "Figma", icon: "🎭" },
     ],
   },
 ];
-
-const levelColors = {
-  Advanced:     { bg: "rgba(52,211,153,0.12)", text: "#34d399", border: "rgba(52,211,153,0.3)" },
-  Intermediate: { bg: "rgba(8,126,164,0.08)",  text: "#087ea4", border: "rgba(8,126,164,0.22)" },
-};
 
 const allTech = [
   "HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS", "Responsive Design",
@@ -126,7 +121,6 @@ export default function Skills() {
             style={{ "--cat-color": current.color, "--cat-glow": current.glow }}
           >
             {current.skills.map((skill) => {
-              const lvl = levelColors[skill.level];
               const isHovered = hoveredSkill === `${current.id}-${skill.name}`;
               return (
                 <div
@@ -149,24 +143,7 @@ export default function Skills() {
                   <div className="skill-info">
                     <div className="skill-name-row">
                       <span className="skill-name">{skill.name}</span>
-                      <span className="skill-pct">{skill.pct}%</span>
                     </div>
-
-                    {/* progress bar */}
-                    <div className="skill-bar-track">
-                      <div
-                        className="skill-bar-fill"
-                        style={{ "--w": `${skill.pct}%`, "--color": current.color }}
-                      />
-                    </div>
-
-                    {/* level badge */}
-                    <span
-                      className="skill-level"
-                      style={{ background: lvl.bg, color: lvl.text, border: `1px solid ${lvl.border}` }}
-                    >
-                      {skill.level}
-                    </span>
                   </div>
                 </div>
               );
