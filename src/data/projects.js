@@ -1,5 +1,28 @@
 export const projects = [
   {
+    slug:     "e-commerce-store",
+    title:    "E-commerce Store",
+    tagline:  "Browse products and manage an online shopping cart",
+    desc:     "An upcoming full-stack online shopping application where users can browse products, manage cart items, and place orders.",
+    problem:  "The project is being developed to bring product discovery, shopping carts, and order management together in one straightforward online store.",
+    features: [
+      "Browse product listings and view product details",
+      "Search for products",
+      "Add, remove, and update cart items",
+      "User registration and login",
+      "Place and manage orders",
+    ],
+    tech:     ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MongoDB"],
+    role:     "Junior Full-Stack Developer — developing the storefront and shopping experience with Node.js, Express.js, and MongoDB.",
+    status:   "Coming Soon",
+    category: "Full-Stack",
+    demo:     "#",
+    repo:     "https://github.com/ibrahime-dev/codealpha_tasks#1-e-commerce-store",
+    color:    "#b98468",
+    image:    "/projects/ecomerce.jpg",
+    images:   ["/projects/ecomerce.jpg"],
+  },
+  {
     slug:     "ethiopian-traditional-foods",
     title:    "Ethiopian Traditional Foods",
     tagline:  "Explore and manage Ethiopian cuisine and recipes",

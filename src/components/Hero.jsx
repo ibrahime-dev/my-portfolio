@@ -10,7 +10,7 @@ const roles = [
 ];
 
 const stats = [
-  { value: "4",   label: "Featured Projects" },
+  { value: "5",   label: "Portfolio Projects" },
   { value: "MERN", label: "Document Database Stack" },
   { value: "PERN", label: "SQL Database Stack" },
   { value: "IT",  label: "Wollo University" },
@@ -88,10 +88,6 @@ export default function Hero() {
             <div className="hero-shape hero-shape-front" aria-hidden="true" />
             <div className="hero-photo-frame">
               <img src={myPhoto} alt="Ibrahim Adem" />
-            </div>
-            <div className="hero-photo-badge">
-              <span className="avail-pulse" />
-              Open to collaborate
             </div>
             <div className="hero-code-badge" aria-hidden="true">&lt; / &gt;</div>
           </div>

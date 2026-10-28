@@ -74,6 +74,9 @@ export default function Projects() {
 
               {/* image / preview */}
               <div className="project-preview" style={{ "--card-color": p.color }}>
+                {p.status !== "Completed" && (
+                  <span className="project-status">{p.status}</span>
+                )}
                 {!imageErrors[p.slug] && (
                   <img
                     src={p.image}

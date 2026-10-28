@@ -247,23 +247,6 @@
   object-fit: cover;
   object-position: center;
 }
-.hero-photo-badge {
-  position: absolute;
-  right: max(2%, calc((100% - 370px) / 2));
-  bottom: 28px;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 11px 16px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: var(--bg-card);
-  color: var(--text);
-  font-size: 13px;
-  font-weight: 700;
-  box-shadow: var(--shadow);
-  z-index: 2;
-}
 .hero-code-badge {
   position: absolute;
   left: max(1%, calc((100% - 370px) / 2));
@@ -473,10 +456,6 @@
     left: calc(50% - 108px);
     top: 10px;
   }
-  .hero-photo-badge {
-    right: calc(50% - 138px);
-    bottom: 4px;
-  }
   .home-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -488,12 +467,6 @@
     top: 6px;
     width: 48px;
     height: 48px;
-  }
-  .hero-photo-badge {
-    right: calc(50% - 138px);
-    bottom: 0;
-    padding: 9px 12px;
-    font-size: 12px;
   }
   .hero-name { font-size: clamp(42px, 12vw, 58px); }
   .hero-buttons { gap: 10px; }
