@@ -18,7 +18,7 @@
   display: inline-block;
   margin-bottom: 14px;
 }
-.footer-logo .logo-bracket { color: #2dd4bf; }
+.footer-logo .logo-bracket { color: var(--accent); }
 
 .footer-brand p {
   font-size: 14px;
@@ -47,7 +47,7 @@
   color: var(--text-muted);
   transition: color 0.25s;
 }
-.footer-col nav a:hover { color: #2dd4bf; }
+.footer-col nav a:hover { color: var(--accent); }
 
 /* social icons */
 .footer-socials {
@@ -68,8 +68,8 @@
   transition: border-color 0.25s, color 0.25s, transform 0.25s;
 }
 .footer-socials a:hover {
-  border-color: #2dd4bf;
-  color: #2dd4bf;
+  border-color: var(--accent);
+  color: var(--accent);
   transform: translateY(-2px);
 }
 
@@ -89,7 +89,7 @@
   color: var(--text-muted);
 }
 
-.footer-credit span { color: #2dd4bf; }
+.footer-credit span { color: var(--accent); }
 
 /* responsive */
 @media (max-width: 760px) {

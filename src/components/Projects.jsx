@@ -15,6 +15,7 @@ export default function Projects() {
   const [active,   setActive]   = useState("All");
   const [selected, setSelected] = useState(null);
   const [toast,    setToast]    = useState(false);
+  const [imageErrors, setImageErrors] = useState({});
 
   const filtered = active === "All"
     ? projects
@@ -42,8 +43,9 @@ export default function Projects() {
         <p className="projects-label">PORTFOLIO</p>
         <h2 className="projects-title">My <span>Projects</span></h2>
         <p className="projects-subtitle">
-          Full-stack projects built with PHP, ASP.NET MVC, React, and more.
-          Click View Details to explore each project in depth.
+          A selection of hands-on projects built as I grow my full-stack skills,
+          including MERN applications and projects using other technologies.
+          Click View Details to explore each project.
         </p>
       </div>
 
@@ -72,39 +74,30 @@ export default function Projects() {
 
               {/* image / preview */}
               <div className="project-preview" style={{ "--card-color": p.color }}>
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="project-img"
-                  onError={(e) => { e.currentTarget.style.display = "none"; }}
-                />
+                {!imageErrors[p.slug] && (
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="project-img"
+                    onError={() => setImageErrors((errors) => ({ ...errors, [p.slug]: true }))}
+                  />
+                )}
                 {/* fallback mock */}
-                <div className="preview-mock">
-                  <div className="mock-bar"><span /><span /><span /></div>
-                  <div className="mock-content">
-                    <div className="mock-title">{p.title}</div>
-                    <div className="mock-lines"><div /><div /><div /></div>
+                {imageErrors[p.slug] && (
+                  <div className="preview-mock">
+                    <div className="mock-bar"><span /><span /><span /></div>
+                    <div className="mock-content">
+                      <div className="mock-title">{p.title}</div>
+                      <div className="mock-lines"><div /><div /><div /></div>
+                    </div>
                   </div>
-                </div>
+                )}
 
-                {/* status badge */}
-                <span className={`status-badge ${p.status === "Completed" ? "badge-done" : "badge-wip"}`}>
-                  {p.status}
-                </span>
               </div>
 
               {/* body */}
               <div className="project-body">
-                <div className="project-body-top">
-                  <h3>{p.title}</h3>
-                  <span className="project-category">{p.category}</span>
-                </div>
-
-                <p className="project-tagline">{p.tagline}</p>
-
-                <div className="project-tech">
-                  {p.tech.map((t) => <span key={t}>{t}</span>)}
-                </div>
+                <h3>{p.title}</h3>
 
                 <div className="project-links">
                   <button

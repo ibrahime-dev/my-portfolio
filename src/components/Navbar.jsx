@@ -67,7 +67,12 @@ export default function Navbar({ theme, toggleTheme }) {
       </nav>
 
       <div className="nav-actions">
-        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+          title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+        >
           {theme === "dark" ? "☀️" : "🌙"}
         </button>
 

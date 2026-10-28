@@ -1,31 +1,25 @@
 import "./About.css";
-import myPhoto from "../assets/myphoto.png";
 
 const stats = [
-  { value: "3+",   label: "Projects Completed" },
-  { value: "4+",   label: "Technologies"        },
-  { value: "1+",   label: "Years Learning"      },
-  { value: "100%", label: "Dedication"          },
+  { value: "4",   label: "Featured Projects" },
+  { value: "22",  label: "Skills & Tools" },
+  { value: "IT",  label: "Wollo University" },
+  { value: "GON", label: "Gondar, Ethiopia" },
 ];
 
 const whatIDo = [
-  { icon: "🖥️", title: "Frontend",  desc: "React.js, HTML, CSS, JavaScript — responsive UIs across all devices." },
-  { icon: "⚙️", title: "Backend",   desc: "Laravel, Express.js, ASP.NET MVC — reliable APIs and server logic." },
-  { icon: "🗄️", title: "Database",  desc: "MySQL, PostgreSQL, MongoDB, SQL Server — scalable data architecture." },
-  { icon: "🛠️", title: "Tools",     desc: "Git, GitHub, VS Code, Postman — clean workflow and version control." },
+  { icon: "🖥️", title: "Frontend", desc: "Creating responsive, user-friendly interfaces with React, JavaScript, HTML, and CSS." },
+  { icon: "⚙️", title: "Backend", desc: "Building REST APIs and server-side features with Node.js and Express." },
+  { icon: "🗄️", title: "Databases", desc: "Working with MongoDB and PostgreSQL as part of MERN and PERN applications." },
+  { icon: "🛠️", title: "Learning by Building", desc: "Growing my skills through hands-on projects, clean code, and collaboration." },
 ];
 
 export default function About() {
   return (
     <div className="about-page">
 
-      {/* ── HERO SPLIT ── */}
+      {/* ── ABOUT INTRO ── */}
       <section id="about" className="about-section">
-        <div className="about-photo-side">
-          <img src={myPhoto} alt="Ibrahim Adem" className="about-photo" />
-          <div className="about-photo-overlay" aria-hidden="true" />
-        </div>
-
         <div className="about-content-side">
           <div className="about-inner">
             <p className="about-label">ABOUT ME</p>
@@ -40,7 +34,7 @@ export default function About() {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
-                Wollo, Ethiopia
+                Gondar, Ethiopia
               </span>
               <span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="15" height="15">
@@ -54,15 +48,29 @@ export default function About() {
             </div>
 
             <p className="about-desc">
-              I'm a passionate Full-Stack Web Developer and IT student at Wollo University,
-              Ethiopia. My journey started with a simple curiosity about how websites work
-              and evolved into a deep love for crafting digital experiences.
+              Hello! I'm a Junior Full-Stack Developer and Information Technology
+              student at Wollo University, Ethiopia, originally from Gondar.
             </p>
 
             <p className="about-desc">
-              I specialise in building modern, responsive, and user-friendly web applications
-              — from clean frontends with React.js to robust backends with
-              Laravel, Express.js, and ASP.NET MVC.
+              I specialize in MERN and PERN stack technologies, with an interest in
+              building modern, responsive, and user-friendly web applications. I
+              enjoy working on both frontend and backend development, from creating
+              interactive user interfaces to developing REST APIs and managing
+              databases.
+            </p>
+
+            <p className="about-desc">
+              I'm continuously improving my skills through hands-on projects,
+              exploring new technologies, and solving real-world problems with code.
+              I'm passionate about learning, writing clean and maintainable code,
+              and turning ideas into practical digital solutions.
+            </p>
+
+            <p className="about-desc">
+              My goal is to grow as a full-stack developer, collaborate with other
+              developers, and build impactful web applications that deliver great
+              user experiences.
             </p>
 
             <div className="about-socials">
@@ -108,7 +116,7 @@ export default function About() {
           <div className="about-whatido-header">
             <p className="about-label">EXPERTISE</p>
             <h2>What I <span>Do</span></h2>
-            <p className="about-whatido-sub">My core areas of focus and technical expertise.</p>
+            <p className="about-whatido-sub">The areas I focus on as I grow as a full-stack developer.</p>
           </div>
           <div className="about-whatido-grid">
             {whatIDo.map((w) => (

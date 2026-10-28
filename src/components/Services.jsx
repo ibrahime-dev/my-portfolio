@@ -8,7 +8,7 @@ const services = [
       </svg>
     ),
     title: "Frontend Development",
-    desc: "Building responsive, high-performance web applications using HTML, CSS, JavaScript, and React.js. I focus on clean component architecture, smooth interactions, and pixel-perfect UIs that work across all devices and screen sizes.",
+    desc: "Creating responsive, user-friendly interfaces with React, JavaScript, HTML, and CSS, with an emphasis on clear layouts and maintainable components.",
   },
   {
     icon: (
@@ -17,7 +17,7 @@ const services = [
       </svg>
     ),
     title: "Backend Development",
-    desc: "Developing robust server-side applications and RESTful APIs using Node.js, Express.js, PHP, and Laravel. I handle authentication, middleware, error handling, and business logic to power your full-stack applications reliably and securely.",
+    desc: "Building server-side features and REST APIs with Node.js and Express as part of my MERN and PERN stack projects.",
   },
   {
     icon: (
@@ -26,7 +26,7 @@ const services = [
       </svg>
     ),
     title: "Database Design",
-    desc: "Designing and managing relational and non-relational databases including MySQL, PostgreSQL, SQL Server, and MongoDB. I structure data efficiently with proper schemas, relationships, and query optimisation for scalable applications.",
+    desc: "Practicing data modeling and database integration with MongoDB and PostgreSQL for full-stack applications.",
   },
   {
     icon: (
@@ -35,7 +35,7 @@ const services = [
       </svg>
     ),
     title: "Full-Stack Web Apps",
-    desc: "End-to-end development of complete web applications — from UI design to database architecture. I deliver fully functional, deployed projects using the MERN stack, PHP/Laravel, or ASP.NET MVC depending on project requirements.",
+    desc: "Developing practical web applications across the frontend, API, and database layers, with a focus on the MERN and PERN stacks.",
   },
   {
     icon: (
@@ -44,7 +44,7 @@ const services = [
       </svg>
     ),
     title: "REST API Development",
-    desc: "Designing and building clean, well-documented RESTful APIs with proper authentication (JWT/sessions), validation, and error handling. I ensure APIs are secure, scalable, and easy to integrate with any frontend or mobile client.",
+    desc: "Learning and applying REST API patterns with Express.js, connecting backend routes to frontend applications and databases.",
   },
   {
     icon: (
@@ -52,8 +52,8 @@ const services = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
       </svg>
     ),
-    title: "ASP.NET MVC Applications",
-    desc: "Building structured, maintainable web applications using ASP.NET MVC and C#. I implement the Model-View-Controller pattern for clean separation of concerns, with SQL Server integration and secure user management.",
+    title: "Learning & Collaboration",
+    desc: "Continuously improving through hands-on projects, exploring new technologies, and collaborating with other developers.",
   },
 ];
 
@@ -63,8 +63,8 @@ export default function Services() {
       <div className="container">
 
         <div className="services-header">
-          <h2>Built for innovation.<br />Designed for results.</h2>
-          <p>Comprehensive solutions to transform your ideas into exceptional digital experiences.</p>
+          <h2>Learning by building.<br />Growing through collaboration.</h2>
+          <p>I’m developing my full-stack skills by turning ideas into practical, user-friendly web applications.</p>
         </div>
 
         <div className="services-grid">
@@ -85,7 +85,7 @@ export default function Services() {
               { num: "01", title: "Discovery",    desc: "Understand your goals, requirements, and target audience." },
               { num: "02", title: "Planning",     desc: "Define architecture, tech stack, and project milestones." },
               { num: "03", title: "Development",  desc: "Build clean, maintainable code with regular updates." },
-              { num: "04", title: "Delivery",     desc: "Test, review, deploy, and hand over with documentation." },
+              { num: "04", title: "Review",       desc: "Test the work, learn from feedback, and make improvements." },
             ].map((step, i, arr) => (
               <div className="process-step" key={step.num}>
                 <div className="step-num">{step.num}</div>

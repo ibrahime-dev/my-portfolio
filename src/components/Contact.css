@@ -14,7 +14,7 @@
   right: 5%;
   width: 500px;
   height: 400px;
-  background: radial-gradient(circle, rgba(45,212,191,0.1) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(185,132,104,0.09) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -22,7 +22,7 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
-  color: #2dd4bf;
+  color: var(--accent);
   margin-bottom: 14px;
 }
 
@@ -31,14 +31,14 @@
   font-weight: 800;
   line-height: 1.0;
   letter-spacing: -2px;
-  color: #f1f5f9;
+  color: var(--text);
   margin-bottom: 20px;
 }
-.contact-title span { color: #2dd4bf; }
+.contact-title span { color: var(--accent); }
 
 .contact-subtitle {
   font-size: 15px;
-  color: #64748b;
+  color: var(--text-muted);
   max-width: 520px;
   line-height: 1.75;
 }
@@ -59,7 +59,7 @@
   text-align: center;
   transition: border-color 0.3s;
 }
-.info-card:hover { border-color: #2dd4bf; }
+.info-card:hover { border-color: var(--accent); }
 
 .info-card-label {
   font-size: 12px;
@@ -118,19 +118,19 @@
   cursor: default;
 }
 a.contact-card { cursor: pointer; }
-.contact-card:hover { border-color: #2dd4bf; transform: translateX(4px); }
-.contact-card-active { border-color: #2dd4bf; }
+.contact-card:hover { border-color: var(--accent); transform: translateX(4px); }
+.contact-card-active { border-color: var(--accent); }
 
 .cc-icon {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: rgba(45, 212, 191, 0.1);
-  border: 1px solid rgba(45, 212, 191, 0.25);
+  background: var(--accent-tint);
+  border: 1px solid rgba(185,132,104,0.24);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2dd4bf;
+  color: var(--accent);
   flex-shrink: 0;
 }
 .cc-label {
@@ -141,7 +141,7 @@ a.contact-card { cursor: pointer; }
   margin-bottom: 2px;
 }
 .cc-value { font-size: 14px; font-weight: 600; color: var(--text); }
-.cc-accent { color: #2dd4bf; }
+.cc-accent { color: var(--accent); }
 
 .available-card {
   display: flex;
@@ -149,17 +149,17 @@ a.contact-card { cursor: pointer; }
   align-items: flex-start;
   padding: 18px;
   background: var(--bg-card);
-  border: 1px solid rgba(45, 212, 191, 0.3);
+  border: 1px solid rgba(185,132,104,0.25);
   border-radius: 12px;
 }
 .avail-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #2dd4bf;
+  background: var(--accent);
   margin-top: 4px;
   flex-shrink: 0;
-  box-shadow: 0 0 8px #2dd4bf;
+  box-shadow: 0 0 8px var(--accent);
   animation: pulse 2s ease-in-out infinite;
 }
 @keyframes pulse {
@@ -203,8 +203,8 @@ form { display: flex; flex-direction: column; gap: 18px; }
 .form-group textarea::placeholder { color: var(--text-muted); }
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #2dd4bf;
-  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-tint);
 }
 .send-btn {
   display: flex;
@@ -213,8 +213,8 @@ form { display: flex; flex-direction: column; gap: 18px; }
   gap: 10px;
   width: 100%;
   padding: 14px;
-  background: #2dd4bf;
-  color: #020f0e;
+  background: var(--accent);
+  color: #ffffff;
   border: none;
   border-radius: 10px;
   font-size: 15px;
@@ -223,9 +223,9 @@ form { display: flex; flex-direction: column; gap: 18px; }
   transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
 }
 .send-btn:hover {
-  background: #14b8a6;
+  filter: saturate(1.15);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.3);
+  box-shadow: 0 8px 24px var(--accent-glow);
 }
 
 /* ── CONNECT ON SOCIAL ── */
@@ -267,25 +267,25 @@ form { display: flex; flex-direction: column; gap: 18px; }
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .social-card:hover {
-  border-color: #2dd4bf;
+  border-color: var(--accent);
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.1);
+  box-shadow: 0 8px 24px var(--accent-glow);
 }
 .social-card-featured {
-  border-color: #2dd4bf;
-  background: rgba(45, 212, 191, 0.05);
+  border-color: var(--accent);
+  background: var(--accent-tint);
 }
 
 .social-card-icon {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: rgba(45, 212, 191, 0.1);
-  border: 1px solid rgba(45, 212, 191, 0.2);
+  background: var(--accent-tint);
+  border: 1px solid rgba(185,132,104,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2dd4bf;
+  color: var(--accent);
   flex-shrink: 0;
 }
 .social-card-name {
@@ -322,8 +322,8 @@ form { display: flex; flex-direction: column; gap: 18px; }
   border-color: #f87171;
 }
 .form-notice {
-  background: rgba(45,212,191,0.1);
-  border: 1px solid rgba(45,212,191,0.3);
+  background: var(--accent-tint);
+  border: 1px solid rgba(185,132,104,0.25);
   color: var(--text);
   padding: 14px 18px;
   border-radius: 10px;

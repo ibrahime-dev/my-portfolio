@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="logo-bracket">&lt;&gt;</span>
               <span> Ibrahim</span>
             </a>
-            <p>Full-Stack Developer from Ethiopia, passionate about crafting modern, performant web applications.</p>
+            <p>Junior Full-Stack Developer and IT student at Wollo University, from Gondar, Ethiopia. Focused on MERN and PERN development.</p>
           </div>
 
           <div className="footer-col">

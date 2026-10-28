@@ -39,27 +39,27 @@
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .service-card:hover {
-  border-color: #4ade80;
+  border-color: var(--accent);
   transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(74, 222, 128, 0.08);
+  box-shadow: var(--shadow);
 }
 
 /* icon box */
 .service-icon {
   width: 56px;
   height: 56px;
-  background: rgba(74, 222, 128, 0.1);
-  border: 1px solid rgba(74, 222, 128, 0.25);
+  background: var(--accent-tint);
+  border: 1px solid var(--border);
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #4ade80;
+  color: var(--accent);
   margin-bottom: 22px;
   transition: background 0.3s;
 }
 .service-card:hover .service-icon {
-  background: rgba(74, 222, 128, 0.18);
+  background: var(--accent-tint);
 }
 
 .service-card h3 {
@@ -112,14 +112,14 @@
   transition: border-color 0.3s, transform 0.3s;
 }
 .process-step:hover {
-  border-color: #2dd4bf;
+  border-color: var(--accent);
   transform: translateY(-4px);
 }
 
 .step-num {
   font-size: 32px;
   font-weight: 800;
-  color: rgba(45,212,191,0.2);
+  color: rgba(185,132,104,0.45);
   margin-bottom: 12px;
   line-height: 1;
 }
@@ -142,7 +142,7 @@
   right: -18px;
   transform: translateY(-50%);
   font-size: 20px;
-  color: #2dd4bf;
+  color: var(--accent);
   z-index: 1;
 }
 

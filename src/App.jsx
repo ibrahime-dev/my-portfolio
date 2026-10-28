@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import Navbar    from "./components/Navbar";
@@ -12,14 +12,14 @@ import CTA       from "./components/CTA";
 import Footer    from "./components/Footer";
 
 export default function App() {
-  const [theme,   setTheme]   = useState(() => localStorage.getItem("theme") || "dark");
+  const [theme, setTheme] = useState(() => localStorage.getItem("portfolio-theme") || "light");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
+    localStorage.setItem("portfolio-theme", theme);
   }, [theme]);
 
-  const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
+  const toggleTheme = () => setTheme((current) => current === "dark" ? "light" : "dark");
 
   return (
     <div className="app">

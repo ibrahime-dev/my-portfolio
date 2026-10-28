@@ -6,11 +6,11 @@ const categories = [
     id: "frontend",
     title: "Frontend",
     icon: "🖥️",
-    color: "#38bdf8",
-    glow: "rgba(56,189,248,0.15)",
+    color: "#087ea4",
+    glow: "rgba(8,126,164,0.12)",
     skills: [
       { name: "HTML5",             icon: "🌐", level: "Advanced",     pct: 92 },
-      { name: "CSS5",              icon: "🎨", level: "Advanced",     pct: 90 },
+      { name: "CSS3",              icon: "🎨", level: "Advanced",     pct: 90 },
       { name: "JavaScript",        icon: "⚡", level: "Advanced",     pct: 85 },
       { name: "React.js",          icon: "⚛️", level: "Intermediate", pct: 75 },
       { name: "Tailwind CSS",      icon: "🌊", level: "Intermediate", pct: 72 },
@@ -21,8 +21,8 @@ const categories = [
     id: "backend",
     title: "Backend & Frameworks",
     icon: "⚙️",
-    color: "#a78bfa",
-    glow: "rgba(167,139,250,0.15)",
+    color: "#7054b8",
+    glow: "rgba(112,84,184,0.12)",
     skills: [
       { name: "Laravel",     icon: "🔴", level: "Advanced",     pct: 85 },
       { name: "Express.js",  icon: "🚀", level: "Intermediate", pct: 72 },
@@ -36,8 +36,8 @@ const categories = [
     id: "database",
     title: "Database",
     icon: "🗄️",
-    color: "#34d399",
-    glow: "rgba(52,211,153,0.15)",
+    color: "#168453",
+    glow: "rgba(22,132,83,0.12)",
     skills: [
       { name: "MySQL",      icon: "🐬", level: "Advanced",     pct: 85 },
       { name: "MongoDB",    icon: "🍃", level: "Intermediate", pct: 68 },
@@ -49,8 +49,8 @@ const categories = [
     id: "tools",
     title: "Tools & Design",
     icon: "🛠️",
-    color: "#fb923c",
-    glow: "rgba(251,146,60,0.15)",
+    color: "#b45309",
+    glow: "rgba(180,83,9,0.12)",
     skills: [
       { name: "Git",             icon: "🌿", level: "Advanced",     pct: 88 },
       { name: "GitHub",          icon: "🐙", level: "Advanced",     pct: 90 },
@@ -64,14 +64,13 @@ const categories = [
 
 const levelColors = {
   Advanced:     { bg: "rgba(52,211,153,0.12)", text: "#34d399", border: "rgba(52,211,153,0.3)" },
-  Intermediate: { bg: "rgba(56,189,248,0.1)",  text: "#38bdf8", border: "rgba(56,189,248,0.25)" },
+  Intermediate: { bg: "rgba(8,126,164,0.08)",  text: "#087ea4", border: "rgba(8,126,164,0.22)" },
 };
 
 const allTech = [
-  "HTML5", "CSS5", "JavaScript", "React.js", "Tailwind CSS", "Responsive Design",
-  "PHP", "Laravel", "Node.js", "Express.js", "ASP.NET MVC", "REST APIs",
-  "MySQL", "MongoDB", "PostgreSQL", "SQL Server",
-  "Git", "GitHub", "VS Code", "Postman", "MongoDB Compass", "Figma",
+  "HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS", "Responsive Design",
+  "Node.js", "Express.js", "REST APIs", "MongoDB", "PostgreSQL",
+  "Git", "GitHub", "VS Code", "Postman",
 ];
 
 export default function Skills() {
@@ -102,7 +101,7 @@ export default function Skills() {
               Skills &amp; <span>Technologies</span>
             </h2>
             <p className="skills-subtitle">
-              A comprehensive overview of my technical skills &amp; proficiency level
+              Technologies I’m learning and using in projects, with a focus on MERN and PERN stack development.
             </p>
           </div>
 

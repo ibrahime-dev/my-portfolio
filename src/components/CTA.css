@@ -1,6 +1,9 @@
 .cta-section {
   position: relative;
-  background: #060d1a;
+  background:
+    radial-gradient(ellipse at 78% 10%, rgba(185,132,104,0.08), transparent 48%),
+    radial-gradient(ellipse at 20% 85%, rgba(156,110,87,0.07), transparent 48%),
+    var(--bg);
   padding: 100px 7%;
   text-align: center;
   overflow: hidden;
@@ -14,7 +17,7 @@
   transform: translate(-50%, -50%);
   width: 600px;
   height: 400px;
-  background: radial-gradient(ellipse, rgba(45,212,191,0.1) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(185,132,104,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -30,14 +33,14 @@
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -1.5px;
-  color: #f1f5f9;
+  color: var(--text);
   margin-bottom: 20px;
 }
-.cta-title span { color: #2dd4bf; }
+.cta-title span { color: var(--accent); }
 
 .cta-subtitle {
   font-size: 15px;
-  color: #64748b;
+  color: var(--text-muted);
   line-height: 1.75;
   max-width: 480px;
   margin: 0 auto 40px;
@@ -52,8 +55,8 @@
 
 .cta-btn-primary {
   padding: 14px 30px;
-  background: #2dd4bf;
-  color: #020f0e;
+  background: var(--button-bg);
+  color: #ffffff;
   border-radius: 40px;
   font-size: 15px;
   font-weight: 700;
@@ -63,16 +66,16 @@
   gap: 8px;
 }
 .cta-btn-primary:hover {
-  background: #14b8a6;
+  filter: saturate(1.15);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(45,212,191,0.3);
+  box-shadow: 0 8px 24px var(--accent-glow);
 }
 
 .cta-btn-ghost {
   padding: 14px 30px;
-  background: #0f1e2e;
-  color: #94a3b8;
-  border: 1px solid #1e293b;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
   border-radius: 40px;
   font-size: 15px;
   font-weight: 500;
@@ -81,8 +84,8 @@
   align-items: center;
 }
 .cta-btn-ghost:hover {
-  border-color: #2dd4bf;
-  color: #2dd4bf;
+  border-color: var(--accent);
+  color: var(--accent);
   transform: translateY(-2px);
 }
 

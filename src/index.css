@@ -9,32 +9,52 @@ html {
 }
 
 :root {
-  --bg:         #0b1120;
-  --bg-card:    #111827;
-  --bg-card2:   #1a2236;
-  --border:     #1e293b;
-  --text:       #f8fafc;
-  --text-muted: #94a3b8;
-  --text-soft:  #cbd5e1;
-  --accent:     #38bdf8;
-  --accent-dark:#07111f;
-  --accent-glow:rgba(56,189,248,0.18);
+  color-scheme: light;
+  --bg:         #fcf8f3;
+  --bg-card:    #fffdfb;
+  --bg-card2:   #f6f0e9;
+  --border:     #e8dfd7;
+  --text:       #1c1b19;
+  --text-muted: #77716c;
+  --text-soft:  #4b4540;
+  --accent:     #b98468;
+  --accent-secondary: #9b6e57;
+  --accent-gradient: linear-gradient(120deg, #c18c6c 0%, #9a6f58 100%);
+  --button-bg:  #1c1b19;
+  --accent-dark:#ffffff;
+  --accent-glow:rgba(185,132,104,0.16);
+  --accent-tint:rgba(185,132,104,0.09);
+  --hero-bg:    #fcf8f3;
+  --modal-header-overlay: rgba(255,253,251,0.22);
+  --gallery-controls-bg: rgba(255,253,251,0.92);
+  --gallery-dot: rgba(28,27,25,0.25);
+  --shadow:     0 18px 48px rgba(74, 52, 38, 0.09);
   --radius:     14px;
   --nav-h:      70px;
   --transition: 0.3s ease;
 }
 
-[data-theme="light"] {
-  --bg:         #f0f4f8;
-  --bg-card:    #ffffff;
-  --bg-card2:   #e8eef5;
-  --border:     #d1dce8;
-  --text:       #0f172a;
-  --text-muted: #64748b;
-  --text-soft:  #475569;
-  --accent:     #0284c7;
-  --accent-dark:#e0f2fe;
-  --accent-glow:rgba(2,132,199,0.12);
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg:         #171412;
+  --bg-card:    #211d1a;
+  --bg-card2:   #2b2521;
+  --border:     #3b322d;
+  --text:       #f5eee8;
+  --text-muted: #c1b5ab;
+  --text-soft:  #ded4cb;
+  --accent:     #d09b79;
+  --accent-secondary: #bd947b;
+  --accent-gradient: linear-gradient(120deg, #d09b79 0%, #ab795f 100%);
+  --button-bg:  #332922;
+  --accent-dark:#1c1714;
+  --accent-glow:rgba(208,155,121,0.2);
+  --accent-tint:rgba(208,155,121,0.12);
+  --hero-bg:    #171412;
+  --modal-header-overlay: rgba(23,20,18,0.2);
+  --gallery-controls-bg: rgba(33,29,26,0.92);
+  --gallery-dot: rgba(245,238,232,0.32);
+  --shadow:     0 18px 48px rgba(0,0,0,0.24);
 }
 
 body {
@@ -43,6 +63,43 @@ body {
   color: var(--text);
   line-height: 1.65;
   transition: background var(--transition), color var(--transition);
+}
+
+.project-card,
+.service-card,
+.process-step,
+.contact-right,
+.info-card,
+.contact-card,
+.social-section,
+.social-card,
+.whatido-card,
+.home-info-tile,
+.about-socials a,
+.footer-socials a,
+.modal-box,
+.pd-info-card,
+.pd-other-card {
+  box-shadow: var(--shadow);
+}
+
+[data-theme="dark"] .hero,
+[data-theme="dark"] .cta-section {
+  background-color: var(--bg);
+}
+
+[data-theme="dark"] .home-stats,
+[data-theme="dark"] .about-stats {
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+  background: rgba(23, 20, 18, 0.9);
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--accent);
 }
 
 a { text-decoration: none; color: inherit; }

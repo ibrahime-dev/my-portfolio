@@ -4,7 +4,7 @@ import "./Contact.css";
 const infoCards = [
   { label: "Timezone",      value: "EAT (UTC+3)",  sub: "East Africa Time"      },
   { label: "Response Time", value: "< 24 hours",   sub: "Usually same day"      },
-  { label: "Availability",  value: "Open",          sub: "Freelance & full-time" },
+  { label: "Availability",  value: "Open",          sub: "Collaboration & opportunities" },
 ];
 
 const socials = [
@@ -75,8 +75,8 @@ export default function Contact() {
           <p className="contact-label">CONTACT</p>
           <h2 className="contact-title">Let's <span>Connect</span></h2>
           <p className="contact-subtitle">
-            Have a project in mind or just want to chat? Fill out the form
-            below or reach out through any of my social channels.
+            I’m happy to connect with developers, discuss ideas, and explore
+            opportunities to learn and collaborate. Send me a message below.
           </p>
         </div>
 
@@ -112,15 +112,15 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="cc-label">Location</p>
-                  <p className="cc-value cc-accent">Wollo, Ethiopia</p>
+                  <p className="cc-value cc-accent">Gondar, Ethiopia</p>
                 </div>
               </div>
             </div>
             <div className="available-card">
               <div className="avail-dot" />
               <div>
-                <p className="avail-title">Currently Available</p>
-                <p className="avail-desc">Open to freelance projects and full-time opportunities. Response within 24 hours.</p>
+                <p className="avail-title">Open to Connect</p>
+                <p className="avail-desc">Interested in learning, collaborating with other developers, and exploring suitable opportunities.</p>
               </div>
             </div>
           </div>
