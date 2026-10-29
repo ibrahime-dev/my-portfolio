@@ -24,11 +24,8 @@ const categories = [
     color: "#7054b8",
     glow: "rgba(112,84,184,0.12)",
     skills: [
-      { name: "Laravel", icon: "🔴" },
       { name: "Express.js", icon: "🚀" },
       { name: "Node.js", icon: "🟢" },
-      { name: "ASP.NET MVC", icon: "🔷" },
-      { name: "PHP", icon: "🐘" },
       { name: "REST APIs", icon: "🔗" },
     ],
   },
